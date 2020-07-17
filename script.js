@@ -5,5 +5,3 @@ document.querySelectorAll(".box").forEach((div => {
     div.classList.add(`box${arr[i]}`);
     i++;  
 }));
-
-console.log("I'm in the temp branch")
