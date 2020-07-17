@@ -5,3 +5,5 @@ document.querySelectorAll(".box").forEach((div => {
     div.classList.add(`box${arr[i]}`);
     i++;  
 }));
+
+console.log("Latest version of the file");
