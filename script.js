@@ -6,4 +6,4 @@ document.querySelectorAll(".box").forEach((div => {
     i++;  
 }));
 
-console.log("Latest version of the file");
+
