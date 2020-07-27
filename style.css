@@ -8,14 +8,15 @@
   box-sizing: border-box;
 }
 
-main, #details, footer, #nav1, header {
+main, #details, #signUp, footer, #nav1, header {
   background-color: rgba(11, 71, 101, 0.384);
-  margin: 10vh auto;
+  margin: 40px auto;
   width: 80%;
   color: white;
   text-align: center;
   padding: 50px 40px;
   border-radius: 4px;
+  border: 4px solid grey;
 }
 
 body {
@@ -25,6 +26,8 @@ body {
 header a {
   text-decoration: none;
   color: white;
+  font-size: 1.8rem;
+  font-weight: normal;
 }
 
 #nav1 {
@@ -56,7 +59,7 @@ header a {
   transition: transform 0.25s;
 }
 
-main p, #details p, footer p {
+main p, #details p, #signUp p, footer p {
   margin: 20px auto;
 }
 
@@ -88,6 +91,34 @@ main figcaption p {
   }
 }
 @media all and (max-width: 600px) {
+  header, #nav1, main, #details, #signUp, footer {
+    margin: 20px auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .container #nav1 {
+    order: 1;
+  }
+  .container header {
+    order: 2;
+  }
+  .container #details {
+    order: 3;
+  }
+  .container #signUp {
+    order: 4;
+  }
+  .container main {
+    order: 5;
+  }
+  .container footer {
+    order: 6;
+  }
+
   #nav1 li {
     flex-basis: 100% !important;
   }
