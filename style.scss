@@ -118,6 +118,7 @@ main, #gallery {
         height: auto;
     }
 
+    //A navbar with the height determined by the <a>, so that the hover effect will spread will fill the entire "button", with the content both horizontally and vertically centered
     #galleryNavbar {
         margin-top: 20px;
     }
@@ -125,19 +126,17 @@ main, #gallery {
     #galleryNavbar ul{
         display: flex;
         li:first-child, li:last-child {
-            flex: 1;
+            flex: 1; //to give more horizontal room to li with text inside 
         }
         li {
-            flex: 3;
+            flex: 3; //to give more horizontal room to li with text inside 
             list-style-type: none;
-            //border: 1px solid green;
            a {
                text-decoration: none;
                color: white;
-               display: flex;
-               flex-basis: 100%;
+               display: flex; //in order to align the text inside
+               flex-basis: 100%; //instead of width: 100%
                height: 100px;
-               //border: 1px solid grey;
                justify-content: center;
                align-items: center;
                border-radius: 2px;
