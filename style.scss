@@ -48,6 +48,8 @@ header {
     }
 }
 
+//#menuButton: class for opening - closing the menu (controlled in script.js by jquery)
+//I had to set it outside the nav and with !important to make it work
 .open {
     display: flex !important;
 }
@@ -56,6 +58,8 @@ header {
     @extend %section;
     padding: 0;
     border: 2px solid white;
+
+    //#menuButton: normally not displayed, a media query changes its display prop
     .toggleNav {
         display: none;
         @extend %menuLinks;
@@ -153,10 +157,13 @@ main {
         justify-content: flex-start;
         #nav1 {
             order: 1;
+
+            //#menuButton: to make it visible with screen < 600px wide
             .toggleNav {
                 display: block;
             }
 
+            //#menuButton: to make it not visible with screen < 600px wide; the class "open" will change this when the menu button is clicked
             ul {
                 display: none;
             }
@@ -190,9 +197,6 @@ main {
         footer {
             order: 6;
         }
-
-
-
 
     }
 

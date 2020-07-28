@@ -6,9 +6,9 @@ document.querySelectorAll(".box").forEach((div => {
     i++;  
 }));
 
+//#menuButton: toggling the list class "open" by clicking the menu button
 $(document).ready(function() {
     $(".toggleNav").on("click", function() {
-        console.log("ok")
         $("#nav1 ul").toggleClass("open");
     })
 
