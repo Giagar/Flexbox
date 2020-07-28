@@ -11,9 +11,6 @@ $(document).ready(function() {
     $(".toggleNav").on("click", function() {
         $("#nav1 ul").toggleClass("open");
     })
-
-
-
 })
 
 
