@@ -119,7 +119,8 @@ main figcaption p, #gallery figcaption p {
   border-radius: 2px;
 }
 #gallery #galleryNavbar ul li a:hover {
-  background: rgba(41, 41, 163, 0.6);
+  background: rgba(66, 66, 66, 0.8);
+  transition: background 0.2s;
 }
 
 #signUp input {
