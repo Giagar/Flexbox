@@ -18,6 +18,12 @@
     border-radius: 4px;
 }
 
+%menuLinks {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
 @mixin scaleUp($scaleValue, $transitionTime) {
     transform: scale($scaleValue);
     transition: transform $transitionTime;
@@ -42,10 +48,18 @@ header {
     }
 }
 
+.open {
+    display: flex !important;
+}
+
 #nav1 {
     @extend %section;
     padding: 0;
     border: 2px solid white;
+    .toggleNav {
+        display: none;
+        @extend %menuLinks;
+    }
     ul {
         display: flex;
         padding: 10px 5px;
@@ -55,10 +69,8 @@ header {
             text-align: center;
             padding: 10px 5px;
             a {
-                text-decoration: none;
-                padding: 10px;
-                color: white;
                 display: inline-block;
+                @extend %menuLinks;
                 }        
             }
     }
@@ -141,6 +153,14 @@ main {
         justify-content: flex-start;
         #nav1 {
             order: 1;
+            .toggleNav {
+                display: block;
+            }
+
+            ul {
+                display: none;
+            }
+
         }
 
         header {

@@ -18,6 +18,12 @@ main, #details, #signUp, footer, #nav1, header {
   border-radius: 4px;
 }
 
+#nav1 ul li a, #nav1 .toggleNav {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
 body {
   background-image: linear-gradient(90deg, #ffa600, #144bb8);
 }
@@ -34,9 +40,16 @@ header a {
   font-weight: normal;
 }
 
+.open {
+  display: flex !important;
+}
+
 #nav1 {
   padding: 0;
   border: 2px solid white;
+}
+#nav1 .toggleNav {
+  display: none;
 }
 #nav1 ul {
   display: flex;
@@ -49,9 +62,6 @@ header a {
   padding: 10px 5px;
 }
 #nav1 ul li a {
-  text-decoration: none;
-  padding: 10px;
-  color: white;
   display: inline-block;
 }
 #nav1 a:hover {
@@ -118,6 +128,12 @@ main figcaption p {
   }
   .container #nav1 {
     order: 1;
+  }
+  .container #nav1 .toggleNav {
+    display: block;
+  }
+  .container #nav1 ul {
+    display: none;
   }
   .container header {
     order: 2;

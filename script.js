@@ -6,4 +6,14 @@ document.querySelectorAll(".box").forEach((div => {
     i++;  
 }));
 
+$(document).ready(function() {
+    $(".toggleNav").on("click", function() {
+        console.log("ok")
+        $("#nav1 ul").toggleClass("open");
+    })
+
+
+
+})
+
 
