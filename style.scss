@@ -232,8 +232,19 @@ main, #gallery {
             order: 5;
         }
 
-        footer {
+        //made all the navbars not visible but the arrows, made the menu items smaller
+        #gallery {
             order: 6;
+            a {
+                height: 60px !important; //if not important, does not work
+            }
+            li:not(.arrow) {
+                display: none;
+            }
+        }
+
+        footer {
+            order: 7;
         }
 
     }

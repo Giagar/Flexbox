@@ -187,8 +187,17 @@ main figcaption p, #gallery figcaption p {
   .container main {
     order: 5;
   }
-  .container footer {
+  .container #gallery {
     order: 6;
+  }
+  .container #gallery a {
+    height: 60px !important;
+  }
+  .container #gallery li:not(.arrow) {
+    display: none;
+  }
+  .container footer {
+    order: 7;
   }
 
   #nav1 li {
