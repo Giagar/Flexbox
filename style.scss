@@ -89,14 +89,14 @@ header {
 
 }
 
-main, #details, #signUp, footer {
+main, #gallery, #details, #signUp, footer {
     @extend %section;
     p {
         margin: 20px auto;
     }
 }
 
-main {
+main, #gallery {
     img {
         height: auto;
         width: 100%;
@@ -110,6 +110,44 @@ main {
             width: 250px;
         }
     }
+}
+
+#gallery {
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    #galleryNavbar {
+        margin-top: 20px;
+    }
+
+    #galleryNavbar ul{
+        display: flex;
+        li:first-child, li:last-child {
+            flex: 1;
+        }
+        li {
+            flex: 3;
+            list-style-type: none;
+            //border: 1px solid green;
+           a {
+               text-decoration: none;
+               color: white;
+               display: flex;
+               flex-basis: 100%;
+               height: 100px;
+               //border: 1px solid grey;
+               justify-content: center;
+               align-items: center;
+               border-radius: 2px;
+           }
+           a:hover {
+               background: hsla(240, 60%, 40%, 0.6);
+           } 
+        }
+    }
+
 }
 
 #signUp {

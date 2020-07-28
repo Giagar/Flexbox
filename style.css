@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-main, #details, #signUp, footer, #nav1, header {
+main, #gallery, #details, #signUp, footer, #nav1, header {
   background-color: rgba(11, 71, 101, 0.384);
   margin: 40px auto;
   width: 80%;
@@ -73,22 +73,53 @@ header a {
   transition: transform 0.25s;
 }
 
-main p, #details p, #signUp p, footer p {
+main p, #gallery p, #details p, #signUp p, footer p {
   margin: 20px auto;
 }
 
-main img {
+main img, #gallery img {
   height: auto;
   width: 100%;
 }
-main figcaption {
+main figcaption, #gallery figcaption {
   padding-top: 20px;
 }
-main figcaption p {
+main figcaption p, #gallery figcaption p {
   padding-bottom: 10px;
   border-bottom: 2px solid white;
   display: inline-block;
   width: 250px;
+}
+
+#gallery img {
+  width: 100%;
+  height: auto;
+}
+#gallery #galleryNavbar {
+  margin-top: 20px;
+}
+#gallery #galleryNavbar ul {
+  display: flex;
+}
+#gallery #galleryNavbar ul li:first-child, #gallery #galleryNavbar ul li:last-child {
+  flex: 1;
+}
+#gallery #galleryNavbar ul li {
+  flex: 3;
+  list-style-type: none;
+}
+#gallery #galleryNavbar ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-basis: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+#gallery #galleryNavbar ul li a:hover {
+  background: rgba(41, 41, 163, 0.6);
 }
 
 #signUp input {
@@ -117,7 +148,7 @@ main figcaption p {
   }
 }
 @media all and (max-width: 600px) {
-  header, #nav1, main, #details, #signUp, footer {
+  header, #nav1, main, #gallery, #details, #signUp, footer {
     margin: 20px auto;
   }
 
