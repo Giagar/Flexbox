@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-main, #gallery, #details, #signUp, footer, #nav1, header {
+main, #gallery, #prices, #details, #signUp, footer, #nav1, header {
   background-color: rgba(11, 71, 101, 0.384);
   margin: 40px auto;
   width: 80%;
@@ -73,7 +73,7 @@ header a {
   transition: transform 0.25s;
 }
 
-main p, #gallery p, #details p, #signUp p, footer p {
+main p, #gallery p, #prices p, #details p, #signUp p, footer p {
   margin: 20px auto;
 }
 
@@ -123,6 +123,13 @@ main figcaption p, #gallery figcaption p {
   transition: background 0.2s;
 }
 
+#prices {
+  display: flex;
+}
+#prices .priceTag {
+  flex: 1;
+}
+
 #signUp input {
   padding: 5px;
   border-radius: 2px;
@@ -149,7 +156,7 @@ main figcaption p, #gallery figcaption p {
   }
 }
 @media all and (max-width: 600px) {
-  header, #nav1, main, #gallery, #details, #signUp, footer {
+  header, #nav1, main, #gallery, #prices, #details, #signUp, footer {
     margin: 20px auto;
   }
 

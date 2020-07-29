@@ -89,7 +89,7 @@ header {
 
 }
 
-main, #gallery, #details, #signUp, footer {
+main, #gallery, #prices, #details, #signUp, footer {
     @extend %section;
     p {
         margin: 20px auto;
@@ -148,6 +148,13 @@ main, #gallery {
         }
     }
 
+}
+
+#prices {
+    display: flex;
+    .priceTag {
+        flex: 1;
+    }
 }
 
 #signUp {
