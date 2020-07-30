@@ -154,43 +154,72 @@ main, #gallery {
 }
 
 #prices {
-    display: flex;
-    .priceTag {
-        flex: 1;
-        font-size: 0.8rem;
-        background: $sectionBgColor;
-        border-radius: 4px;
-        padding: 30px 10px;
-        margin: 15px;
-        color: $blackColor;
-        h2 {
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            color: white;
-            margin-bottom: 40px;
-        }
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: normals;;
+    }
+    hr {
+        width: 60%;
+        margin: 18px auto 0 auto;
+    }
+    #prices1, #prices2 {
+        display: flex;
+        .priceTag {
+            flex: 1;
+            font-size: 0.8rem;
+            background: $sectionBgColor;
+            border-radius: 4px;
+            padding: 30px 10px;
+            margin: 15px;
+            color: $blackColor;
 
-        ul {
-            li{
-                list-style-type: none;
-                border-bottom: 1px solid grey;
-                padding: 10px 0;
+            h3 {
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                color: white;
+                margin-bottom: 40px;
             }
-            li:last-child {
-                border-bottom: none !important;
+
+            ul {
+                padding: 10px;
+                li{
+                    list-style-type: none;
+                    border-bottom: 1px solid grey;
+                    padding: 10px 0;
+                }
+                li:last-child {
+                    border-bottom: none !important;
+                }
             }
-        }
-        .price {
-            font-size: 1.7rem;
-            margin-bottom: 45px;
-        }
-        .cta {
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 2px;
-            background: yellow;
+
+            .price {
+                font-size: 1.7rem;
+                margin-bottom: 45px;
+            }
+
+            .cta {
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 2px;
+                background: yellow;
+            }
         }
     }
+
+    #prices1 {
+        align-items: center;
+    }
+
+    #prices2 {
+        align-items: stretch;
+        .priceTag {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    
 }
 
 #signUp {

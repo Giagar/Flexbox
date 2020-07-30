@@ -123,10 +123,19 @@ main figcaption p, #gallery figcaption p {
   transition: background 0.2s;
 }
 
-#prices {
+#prices h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: normals;
+}
+#prices hr {
+  width: 60%;
+  margin: 18px auto 0 auto;
+}
+#prices #prices1, #prices #prices2 {
   display: flex;
 }
-#prices .priceTag {
+#prices #prices1 .priceTag, #prices #prices2 .priceTag {
   flex: 1;
   font-size: 0.8rem;
   background: rgba(11, 71, 101, 0.384);
@@ -135,29 +144,43 @@ main figcaption p, #gallery figcaption p {
   margin: 15px;
   color: #0a0a0a;
 }
-#prices .priceTag h2 {
+#prices #prices1 .priceTag h3, #prices #prices2 .priceTag h3 {
   font-size: 1.3rem;
   text-transform: uppercase;
   color: white;
   margin-bottom: 40px;
 }
-#prices .priceTag ul li {
+#prices #prices1 .priceTag ul, #prices #prices2 .priceTag ul {
+  padding: 10px;
+}
+#prices #prices1 .priceTag ul li, #prices #prices2 .priceTag ul li {
   list-style-type: none;
   border-bottom: 1px solid grey;
   padding: 10px 0;
 }
-#prices .priceTag ul li:last-child {
+#prices #prices1 .priceTag ul li:last-child, #prices #prices2 .priceTag ul li:last-child {
   border-bottom: none !important;
 }
-#prices .priceTag .price {
+#prices #prices1 .priceTag .price, #prices #prices2 .priceTag .price {
   font-size: 1.7rem;
   margin-bottom: 45px;
 }
-#prices .priceTag .cta {
+#prices #prices1 .priceTag .cta, #prices #prices2 .priceTag .cta {
   text-decoration: none;
   padding: 10px;
   border-radius: 2px;
   background: yellow;
+}
+#prices #prices1 {
+  align-items: center;
+}
+#prices #prices2 {
+  align-items: stretch;
+}
+#prices #prices2 .priceTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #signUp input {
