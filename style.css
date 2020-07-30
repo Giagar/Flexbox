@@ -128,6 +128,36 @@ main figcaption p, #gallery figcaption p {
 }
 #prices .priceTag {
   flex: 1;
+  font-size: 0.8rem;
+  background: rgba(11, 71, 101, 0.384);
+  border-radius: 4px;
+  padding: 30px 10px;
+  margin: 15px;
+  color: #0a0a0a;
+}
+#prices .priceTag h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 40px;
+}
+#prices .priceTag ul li {
+  list-style-type: none;
+  border-bottom: 1px solid grey;
+  padding: 10px 0;
+}
+#prices .priceTag ul li:last-child {
+  border-bottom: none !important;
+}
+#prices .priceTag .price {
+  font-size: 1.7rem;
+  margin-bottom: 45px;
+}
+#prices .priceTag .cta {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 2px;
+  background: yellow;
 }
 
 #signUp input {
@@ -203,8 +233,11 @@ main figcaption p, #gallery figcaption p {
   .container #gallery li:not(.arrow) {
     display: none;
   }
-  .container footer {
+  .container #prices {
     order: 7;
+  }
+  .container footer {
+    order: 8;
   }
 
   #nav1 li {

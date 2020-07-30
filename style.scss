@@ -8,8 +8,11 @@
     box-sizing: border-box;
 }
 
+$sectionBgColor: hsla(200, 80%, 22%, 0.384);
+$blackColor: rgb(10, 10, 10);
+
 %section {
-    background-color: hsla(200, 80%, 22%, 0.384);
+    background-color: $sectionBgColor;
     margin: 40px auto;
     width: 80%;
     color: white;
@@ -154,6 +157,39 @@ main, #gallery {
     display: flex;
     .priceTag {
         flex: 1;
+        font-size: 0.8rem;
+        background: $sectionBgColor;
+        border-radius: 4px;
+        padding: 30px 10px;
+        margin: 15px;
+        color: $blackColor;
+        h2 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            li{
+                list-style-type: none;
+                border-bottom: 1px solid grey;
+                padding: 10px 0;
+            }
+            li:last-child {
+                border-bottom: none !important;
+            }
+        }
+        .price {
+            font-size: 1.7rem;
+            margin-bottom: 45px;
+        }
+        .cta {
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 2px;
+            background: yellow;
+        }
     }
 }
 
@@ -250,8 +286,12 @@ main, #gallery {
             }
         }
 
-        footer {
+        #prices {
             order: 7;
+        }
+
+        footer {
+            order: 8;
         }
 
     }
