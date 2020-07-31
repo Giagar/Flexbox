@@ -208,6 +208,17 @@ main figcaption p, #gallery figcaption p {
     flex: 1 1 25% !important;
   }
 }
+@media all and (max-width: 800px) {
+  #prices1, #prices2 {
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    justify-content: center;
+  }
+
+  .priceTag {
+    flex: 0 1 calc(50% - 30px) !important;
+  }
+}
 @media all and (max-width: 600px) {
   header, #nav1, main, #gallery, #prices, #details, #signUp, footer {
     margin: 20px auto;
@@ -258,6 +269,9 @@ main figcaption p, #gallery figcaption p {
   }
   .container #prices {
     order: 7;
+  }
+  .container #prices .priceTag {
+    flex: 1 1 100% !important;
   }
   .container footer {
     order: 8;

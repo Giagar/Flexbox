@@ -256,6 +256,20 @@ main, #gallery {
     }
 }
 
+@media all and (max-width: 800px) {
+
+    #prices1, #prices2 {
+        flex-wrap: wrap !important;
+        align-items: stretch !important;
+        justify-content: center;
+    }
+    .priceTag {
+        flex: 0 1 calc(50% - 30px) !important;    
+                
+    }
+    
+}
+
 @media all and (max-width: 600px) {
     %section {
         margin: 20px auto;
@@ -317,6 +331,9 @@ main, #gallery {
 
         #prices {
             order: 7;
+            .priceTag {
+                flex: 1 1 100% !important;
+            }
         }
 
         footer {
