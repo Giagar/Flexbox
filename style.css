@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-main, #gallery, #prices, #details, #signUp, footer, #nav1, header {
+main, #gallery, #prices, #flexGrid, #details, #signUp, footer, #nav1, header {
   background-color: rgba(11, 71, 101, 0.384);
   margin: 40px auto;
   width: 80%;
@@ -79,7 +79,7 @@ header a {
   transition: transform 0.25s;
 }
 
-main p, #gallery p, #prices p, #details p, #signUp p, footer p {
+main p, #gallery p, #prices p, #flexGrid p, #details p, #signUp p, footer p {
   margin: 20px auto;
 }
 
@@ -189,6 +189,29 @@ main figcaption p, #gallery figcaption p {
   justify-content: space-between;
 }
 
+#flexGrid .flexGridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#flexGrid .flexGridContainer .grid-item {
+  padding: 10px 5px;
+  margin: 4px;
+  background: rgba(11, 71, 101, 0.384);
+  flex: 0 1 calc(33.33% - 8px);
+}
+#flexGrid .buttonsContainer {
+  display: flex;
+  justify-content: center;
+  background: rgba(11, 71, 101, 0.384);
+  margin: 40px;
+  padding: 20px;
+}
+#flexGrid .buttonsContainer .btn {
+  padding: 4px;
+  margin: 0 10px;
+}
+
 #signUp input {
   padding: 5px;
   border-radius: 2px;
@@ -226,7 +249,7 @@ main figcaption p, #gallery figcaption p {
   }
 }
 @media all and (max-width: 600px) {
-  header, #nav1, main, #gallery, #prices, #details, #signUp, footer {
+  header, #nav1, main, #gallery, #prices, #flexGrid, #details, #signUp, footer {
     margin: 20px auto;
   }
 

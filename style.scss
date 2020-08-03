@@ -98,7 +98,7 @@ header {
 
 }
 
-main, #gallery, #prices, #details, #signUp, footer {
+main, #gallery, #prices, #flexGrid, #details, #signUp, footer {
     @extend %section;
     p {
         margin: 20px auto;
@@ -223,6 +223,35 @@ main, #gallery {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+    }
+    
+}
+
+#flexGrid {
+    .flexGridContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .grid-item {
+        //border: 1px solid grey;
+        padding: 10px 5px;
+        margin: 4px;
+        background: $sectionBgColor;
+        flex: 0 1 calc(33.33% - 8px);
+      }
+    }
+    
+    .buttonsContainer {
+        display: flex;
+        justify-content: center;
+        background: $sectionBgColor;
+        margin: 40px;
+        padding: 20px;
+        .btn {
+            padding: 4px;
+            margin: 0 10px;
+
         }
     }
     
