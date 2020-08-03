@@ -18,10 +18,23 @@ main, #gallery, #prices, #flexGrid, #details, #signUp, footer, #nav1, header {
   border-radius: 4px;
 }
 
+#flexGrid h2, #prices h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
 #nav1 ul li a, #nav1 .toggleNav {
   text-decoration: none;
   padding: 10px;
   color: white;
+}
+
+#flexGrid .buttonsContainer .btn, #prices #prices1 .priceTag .cta, #prices #prices2 .priceTag .cta {
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  background: yellow;
 }
 
 body {
@@ -129,11 +142,6 @@ main figcaption p, #gallery figcaption p {
   transition: background 0.2s;
 }
 
-#prices h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: normals;
-}
 #prices hr {
   width: 60%;
   margin: 18px auto 0 auto;
@@ -173,9 +181,6 @@ main figcaption p, #gallery figcaption p {
 }
 #prices #prices1 .priceTag .cta, #prices #prices2 .priceTag .cta {
   text-decoration: none;
-  padding: 10px;
-  border-radius: 2px;
-  background: yellow;
 }
 #prices #prices1 {
   align-items: center;
@@ -189,6 +194,9 @@ main figcaption p, #gallery figcaption p {
   justify-content: space-between;
 }
 
+#flexGrid h2 {
+  margin-bottom: 45px;
+}
 #flexGrid .flexGridContainer {
   display: flex;
   flex-wrap: wrap;
@@ -199,17 +207,21 @@ main figcaption p, #gallery figcaption p {
   margin: 4px;
   background: rgba(11, 71, 101, 0.384);
   flex: 0 1 calc(33.33% - 8px);
+  border-radius: 2px;
+  font-size: 1rem;
+  color: #0a0a0a;
 }
 #flexGrid .buttonsContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   background: rgba(11, 71, 101, 0.384);
-  margin: 40px;
+  margin: 45px;
   padding: 20px;
+  border-radius: 2px;
 }
 #flexGrid .buttonsContainer .btn {
-  padding: 4px;
   margin: 0 10px;
+  font-size: 0.8rem;
 }
 
 #signUp input {
@@ -270,6 +282,9 @@ main figcaption p, #gallery figcaption p {
   .container header {
     order: 2;
   }
+  .container header a {
+    border: none;
+  }
   .container #details {
     order: 3;
   }
@@ -302,8 +317,17 @@ main figcaption p, #gallery figcaption p {
   .container #prices .priceTag {
     flex: 1 1 100% !important;
   }
-  .container footer {
+  .container #flexGrid {
     order: 8;
+  }
+  .container #flexGrid .grid-item {
+    flex: 1 1 100%;
+  }
+  .container #flexGrid .buttonsContainer {
+    display: none;
+  }
+  .container footer {
+    order: 9;
   }
 
   #nav1 li {

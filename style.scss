@@ -10,6 +10,9 @@
 
 $sectionBgColor: hsla(200, 80%, 22%, 0.384);
 $blackColor: rgb(10, 10, 10);
+$largeBdRadius: 4px;
+$smallBdRadius: 2px;
+
 
 %section {
     background-color: $sectionBgColor;
@@ -21,10 +24,23 @@ $blackColor: rgb(10, 10, 10);
     border-radius: 4px;
 }
 
+%h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
 %menuLinks {
     text-decoration: none;
     padding: 10px;
     color: white;
+}
+
+%button {
+    padding: 10px;
+    border-radius: $smallBdRadius;
+    border: none;
+    background: yellow;
 }
 
 @mixin scaleUp($scaleValue, $transitionTime) {
@@ -161,9 +177,7 @@ main, #gallery {
 
 #prices {
     h2 {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-weight: normals;;
+        @extend %h2;
     }
     hr {
         width: 60%;
@@ -205,10 +219,8 @@ main, #gallery {
             }
 
             .cta {
+                @extend %button;
                 text-decoration: none;
-                padding: 10px;
-                border-radius: 2px;
-                background: yellow;
             }
         }
     }
@@ -229,29 +241,37 @@ main, #gallery {
 }
 
 #flexGrid {
+    h2 {
+        @extend %h2;
+        margin-bottom: 45px;
+    }
     .flexGridContainer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         .grid-item {
-        //border: 1px solid grey;
-        padding: 10px 5px;
-        margin: 4px;
-        background: $sectionBgColor;
-        flex: 0 1 calc(33.33% - 8px);
-      }
+            //border: 1px solid grey;
+            padding: 10px 5px;
+            margin: 4px;
+            background: $sectionBgColor;
+            flex: 0 1 calc(33.33% - 8px);
+            border-radius: $smallBdRadius;
+            font-size: 1rem;
+            color: $blackColor;
+        }
     }
     
     .buttonsContainer {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         background: $sectionBgColor;
-        margin: 40px;
+        margin: 45px;
         padding: 20px;
+        border-radius: $smallBdRadius;
         .btn {
-            padding: 4px;
+            @extend %button;
             margin: 0 10px;
-
+            font-size: 0.8rem;
         }
     }
     
@@ -331,6 +351,10 @@ main, #gallery {
 
         header {
             order: 2;
+            a {
+                border: none;
+            }
+            
         }
 
         #details {
@@ -371,8 +395,18 @@ main, #gallery {
             }
         }
 
-        footer {
+        #flexGrid {
             order: 8;
+            .grid-item {
+                flex: 1 1 100%;
+            }
+            .buttonsContainer {
+                display: none;
+            }
+        }
+
+        footer {
+            order: 9;
         }
 
     }
