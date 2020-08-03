@@ -18,16 +18,21 @@ const btnCenter = document.querySelector("#center");
 const btnSpaceBetween = document.querySelector("#space-between");
 const flexContainer = document.querySelector(".flexGridContainer");
 const flexItem = document.querySelectorAll(".grid-item");
+const flexGridBtn = document.querySelectorAll("grid-btn");
 
-console.log(flexItem)
+//console.log(flexItem)
 
 btnStretch.addEventListener("click", () => {
     flexItem.forEach(item => item.style.flexGrow = 1);
+    //flexGridBtn.forEach(item => item.classList.remove("btnActive"));
+    btnStretch.classList.add("btnActive");
 });
 
 btnCenter.addEventListener("click", () => {
     flexContainer.style.justifyContent = "center";
     flexItem.forEach(item => item.style.flexGrow = 0);
+    //flexGridBtn.forEach(item => item.classList.remove("btnActive"));
+    btnStretch.classList.remove("btnActive");
 });
 
 btnSpaceBetween.addEventListener("click", () => {

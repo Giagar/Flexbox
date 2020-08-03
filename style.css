@@ -37,6 +37,10 @@ main, #gallery, #prices, #flexGrid, #details, #signUp, footer, #nav1, header {
   background: yellow;
 }
 
+.btnActive {
+  background: green !important;
+}
+
 body {
   background-image: linear-gradient(90deg, #ffa600, #144bb8);
 }
