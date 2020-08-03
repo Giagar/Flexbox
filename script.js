@@ -13,3 +13,24 @@ $(document).ready(function() {
     })
 })
 
+const btnStretch = document.querySelector("#stretch");
+const btnCenter = document.querySelector("#center");
+const btnSpaceBetween = document.querySelector("#space-between");
+const flexContainer = document.querySelector(".flexGridContainer");
+const flexItem = document.querySelectorAll(".grid-item");
+
+console.log(flexItem)
+
+btnStretch.addEventListener("click", () => {
+    flexItem.forEach(item => item.style.flexGrow = 1);
+});
+
+btnCenter.addEventListener("click", () => {
+    flexContainer.style.justifyContent = "center";
+    flexItem.forEach(item => item.style.flexGrow = 0);
+});
+
+btnSpaceBetween.addEventListener("click", () => {
+    flexContainer.style.justifyContent = "space-between";
+    flexItem.forEach(item => item.style.flexGrow = 0);
+});
