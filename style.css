@@ -272,6 +272,10 @@ main figcaption p, #gallery figcaption p {
   color: white;
   justify-content: center;
 }
+#airbnbForm .flexForm input[type=date] {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+}
 
 #signUp input {
   padding: 5px;

@@ -333,6 +333,11 @@ main, #gallery {
             justify-content: center;
         }
 
+        input[type = date] {
+            font-family: Arial, Helvetica, sans-serif;
+            color: hsla(0, 0, 50%, 1);
+        }
+
     }
 
 }
