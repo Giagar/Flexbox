@@ -38,10 +38,11 @@ main, #gallery, #prices, #flexGrid, #details, #signUp, footer, #nav1, header {
 }
 
 .btnActive {
-  background: #fff066 !important;
-  transform: scale(1.05);
-  box-shadow: 0 0 8px 1px rgba(255, 250, 204, 0.8), 0 0 10px 2px rgba(255, 230, 0, 0.6), 0 0 14px 2px rgba(255, 230, 0, 0.8) inset;
-  border: 2px solid rgba(255, 230, 0, 0.7) !important;
+  background: #ffe600 !important;
+  transform: scale(1.2);
+  /* box-shadow: 0 0 8px 1px hsla(54, 100%, 90%, 0.8), 0 0 10px 2px hsla(54, 100%, 50%, 0.6), 0 0 14px 2px hsla(54, 100%, 50%, 0.8) inset;
+  border: 2px solid hsla(54, 100%, 50%, 0.7) !important; */
+  border: 6px solid #00cccc !important;
 }
 
 body {
@@ -222,7 +223,7 @@ main figcaption p, #gallery figcaption p {
   display: flex;
   justify-content: space-evenly;
   background: rgba(11, 71, 101, 0.384);
-  margin: 45px 40px;
+  margin: 45px 35px;
   padding: 20px;
   border-radius: 2px;
 }
