@@ -372,6 +372,32 @@ main, #gallery {
     }
 }
 
+@media all and (max-width: 1200px) {
+    #airbnbForm {
+        .flexForm {
+            flex: 0 1 250px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            input, label, select {
+                flex: 1;
+                border-right: none;
+                border-bottom: 1px solid lightgrey;
+            }
+            input:first-child {
+                flex-basis: 36px;
+            }
+
+            input:last-child {
+                border-bottom: none;
+            }
+        }
+        video {
+            width: auto;
+            height: 100%;
+        }
+    }
+}
 
 @media all and (max-width: 1100px) {
     #nav1 ul {
@@ -484,8 +510,12 @@ main, #gallery {
             }
         }
 
-        footer {
+        #airbnbForm {
             order: 9;
+        }
+
+        footer {
+            order: 10;
         }
 
     }

@@ -298,6 +298,29 @@ main figcaption p, #gallery figcaption p {
     width: 100%;
   }
 }
+@media all and (max-width: 1200px) {
+  #airbnbForm .flexForm {
+    flex: 0 1 250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+  #airbnbForm .flexForm input, #airbnbForm .flexForm label, #airbnbForm .flexForm select {
+    flex: 1;
+    border-right: none;
+    border-bottom: 1px solid lightgrey;
+  }
+  #airbnbForm .flexForm input:first-child {
+    flex-basis: 36px;
+  }
+  #airbnbForm .flexForm input:last-child {
+    border-bottom: none;
+  }
+  #airbnbForm video {
+    width: auto;
+    height: 100%;
+  }
+}
 @media all and (max-width: 1100px) {
   #nav1 ul {
     flex-wrap: wrap;
@@ -392,8 +415,11 @@ main figcaption p, #gallery figcaption p {
   .container #flexGrid .buttonsContainer {
     display: none;
   }
-  .container footer {
+  .container #airbnbForm {
     order: 9;
+  }
+  .container footer {
+    order: 10;
   }
 
   #nav1 li {
