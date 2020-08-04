@@ -236,6 +236,8 @@ main figcaption p, #gallery figcaption p {
 }
 
 #airbnbForm {
+  position: relative;
+  overflow: hidden;
   height: 500px;
   display: flex;
   justify-content: center;
@@ -275,6 +277,13 @@ main figcaption p, #gallery figcaption p {
 #airbnbForm .flexForm input[type=date] {
   font-family: Arial, Helvetica, sans-serif;
   color: gray;
+}
+#airbnbForm video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
 }
 
 #signUp input {
