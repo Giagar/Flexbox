@@ -333,8 +333,11 @@ main, #gallery {
         justify-content: center;
     }
     .priceTag {
-        flex: 0 1 calc(50% - 30px) !important;    
-                
+        flex: 0 1 calc(50% - 30px) !important;                    
+    }
+
+    .flexGridContainer {
+        height: auto !important;
     }
     
 }

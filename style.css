@@ -266,6 +266,10 @@ main figcaption p, #gallery figcaption p {
   .priceTag {
     flex: 0 1 calc(50% - 30px) !important;
   }
+
+  .flexGridContainer {
+    height: auto !important;
+  }
 }
 @media all and (max-width: 600px) {
   header, #nav1, main, #gallery, #prices, #flexGrid, #details, #signUp, footer {
