@@ -126,7 +126,7 @@ header {
 
 }
 
-main, #gallery, #prices, #flexGrid, #details, #signUp, footer {
+main, #gallery, #prices, #flexGrid, #airbnbForm, #details, #signUp, footer {
     @extend %section;
     p {
         margin: 20px auto;
@@ -285,11 +285,58 @@ main, #gallery {
             @extend %button;
             margin: 0 10px;
             font-size: 0.8rem;
-
+        }
+        .btn:hover {
+            transform: scale(1.2);
+            transition: transform .25s;
         }
     }
     
 }
+
+#airbnbForm {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .flexForm {
+        flex: 1;
+        max-width: 1000px;
+        display: flex;
+        justify-content: center;
+        border: 15px solid hsla(0, 0, 10%, 0.3);
+        border-radius: $largeBdRadius;
+        input, label, select {
+            display: flex;
+            flex: 2 3 300px;
+            padding: 8px !important;
+            font-size: 0.8rem;
+            align-items: center;
+            border: none;
+            border-right: 1px solid lightgrey;
+            background: white;
+            color: $blackColor;
+        }
+
+        label, select {
+            flex: 1 6 100px;
+        }
+        
+        input:first-child {
+            flex: 1 1 300px;
+        }
+
+        input[value = Search] {
+            background: hsl(0, 80%, 50%);
+            border-right: none;
+            color: white;
+            justify-content: center;
+        }
+
+    }
+
+}
+
 
 #signUp {
     input {
