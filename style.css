@@ -38,11 +38,9 @@ main, #gallery, #prices, #flexGrid, #details, #signUp, footer, #nav1, header {
 }
 
 .btnActive {
-  background: #ffe600 !important;
-  transform: scale(1.2);
+  background: #00cccc !important;
   /* box-shadow: 0 0 8px 1px hsla(54, 100%, 90%, 0.8), 0 0 10px 2px hsla(54, 100%, 50%, 0.6), 0 0 14px 2px hsla(54, 100%, 50%, 0.8) inset;
   border: 2px solid hsla(54, 100%, 50%, 0.7) !important; */
-  border: 6px solid #00cccc !important;
 }
 
 body {
@@ -209,6 +207,7 @@ main figcaption p, #gallery figcaption p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 350px;
 }
 #flexGrid .flexGridContainer .grid-item {
   padding: 10px 5px;

@@ -51,12 +51,13 @@ $btnColor: hsla(54, 100%, 50%, 1);
 
 .btnActive {
     //background: hsla(54, 100%, 70%, 1) !important;
-    background: $btnColor !important;
-    transform: scale(1.2);
+    //background: $btnColor !important;
+    background:hsl(180, 100%, 40%) !important;
+    //transform: scale(1.1);
     /* box-shadow: 0 0 8px 1px hsla(54, 100%, 90%, 0.8), 0 0 10px 2px hsla(54, 100%, 50%, 0.6), 0 0 14px 2px hsla(54, 100%, 50%, 0.8) inset;
     border: 2px solid hsla(54, 100%, 50%, 0.7) !important; */
     //border: 6px solid hsl(39, 100%, 40%) !important;
-    border: 6px solid hsl(180, 100%, 40%) !important;
+    //border: 6px solid hsl(180, 100%, 40%) !important;
 }
 
 body {
@@ -260,6 +261,7 @@ main, #gallery {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        height: 350px;
         .grid-item {
             //border: 1px solid grey;
             padding: 10px 5px;
