@@ -18,24 +18,26 @@ const btnCenter = document.querySelector("#center");
 const btnSpaceBetween = document.querySelector("#space-between");
 const flexContainer = document.querySelector(".flexGridContainer");
 const flexItem = document.querySelectorAll(".grid-item");
-const flexGridBtn = document.querySelectorAll("grid-btn");
+const flexGridBtn = document.querySelectorAll(".grid-btn");
 
 //console.log(flexItem)
 
 btnStretch.addEventListener("click", () => {
     flexItem.forEach(item => item.style.flexGrow = 1);
-    //flexGridBtn.forEach(item => item.classList.remove("btnActive"));
+    flexGridBtn.forEach(item => item.classList.remove("btnActive"));
     btnStretch.classList.add("btnActive");
 });
 
 btnCenter.addEventListener("click", () => {
     flexContainer.style.justifyContent = "center";
     flexItem.forEach(item => item.style.flexGrow = 0);
-    //flexGridBtn.forEach(item => item.classList.remove("btnActive"));
-    btnStretch.classList.remove("btnActive");
+    flexGridBtn.forEach(item => item.classList.remove("btnActive"));
+    btnCenter.classList.add("btnActive");
 });
 
 btnSpaceBetween.addEventListener("click", () => {
     flexContainer.style.justifyContent = "space-between";
     flexItem.forEach(item => item.style.flexGrow = 0);
+    flexGridBtn.forEach(item => item.classList.remove("btnActive"));
+    btnSpaceBetween.classList.add("btnActive");
 });

@@ -12,6 +12,7 @@ $sectionBgColor: hsla(200, 80%, 22%, 0.384);
 $blackColor: rgb(10, 10, 10);
 $largeBdRadius: 4px;
 $smallBdRadius: 2px;
+$btnColor: hsla(54, 100%, 50%, 1);
 
 
 %section {
@@ -40,7 +41,7 @@ $smallBdRadius: 2px;
     padding: 10px;
     border-radius: $smallBdRadius;
     border: none;
-    background: yellow;
+    background: $btnColor;
 }
 
 @mixin scaleUp($scaleValue, $transitionTime) {
@@ -49,7 +50,10 @@ $smallBdRadius: 2px;
 }
 
 .btnActive {
-    background:green !important;
+    background: hsla(54, 100%, 70%, 1) !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 1px hsla(54, 100%, 90%, 0.8), 0 0 10px 2px hsla(54, 100%, 50%, 0.6), 0 0 14px 2px hsla(54, 100%, 50%, 0.8) inset;
+    border: 2px solid hsla(54, 100%, 50%, 0.7) !important;
 }
 
 body {
@@ -269,13 +273,14 @@ main, #gallery {
         display: flex;
         justify-content: space-evenly;
         background: $sectionBgColor;
-        margin: 45px;
+        margin: 45px 40px;
         padding: 20px;
         border-radius: $smallBdRadius;
         .btn {
             @extend %button;
             margin: 0 10px;
             font-size: 0.8rem;
+
         }
     }
     
