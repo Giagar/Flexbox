@@ -22,6 +22,7 @@ $btnColor: hsla(54, 100%, 50%, 1);
   text-align: center;
   padding: 50px 40px;
   border-radius: 4px;
+  font-weight: normal;
 }
 
 %h2 {
@@ -372,14 +373,14 @@ main,
 #mobileApp {
   $yellowish: hsla(30, 70%, 50%, 1);
   h2 {
-    @extend h2;
+    @extend %h2;
     margin-bottom: 45px;
   }
   .contentWrapper {
-    border: 14px solid $blackColor;
-    border-radius: $largeBdRadius;
-    height: 1000px;
-    //overflow-y: scroll;
+    border: 8px solid $blackColor;
+    border-bottom: 50px solid $blackColor;
+    border-radius: $largeBdRadius * 2;
+    height: 900px;
     display: flex;
     flex-direction: column;
     * {
@@ -399,6 +400,7 @@ main,
         padding: 0.5rem;
         color: white;
         flex: 1 3 auto;
+        font-size: 0.8rem;
       }
       h3 {
           padding: 0.5rem;
@@ -407,18 +409,26 @@ main,
     }
     .appContent {
       overflow-y: scroll;
-      //height: 500px;
+      //-webkit-overflow-scrolling: touch;
       background: white;
       color: $blackColor;
+      font-size: 1rem;
     }
     .appFooter {
       background: $yellowish;
       display: flex;
       a {
-        border-right: 1px solid grey;
-        padding: 10px 2px;
+        border-right: 1px solid hsla(0, 0, 30%, 0.3);
+        padding: 0.5rem 0.2rem 1rem 0.2rem;
         flex: 1;
         color: white;
+        font-size: .8rem;
+        
+        i {
+          display: block;
+          padding: 0.5rem;
+          font-size: 1rem;
+        }
       }
       a:last-child {
         border-right: none;
