@@ -361,7 +361,16 @@ main figcaption p,
   overflow-y: scroll;
   background: white;
   color: #0a0a0a;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  text-align: justify;
+  padding: 0.5rem;
+  line-height: 1.4rem;
+}
+#mobileApp .contentWrapper .appContent img {
+  max-width: 30%;
+  height: auto;
+  float: left;
+  margin-right: 0.5rem;
 }
 #mobileApp .contentWrapper .appFooter {
   background: #d98026;

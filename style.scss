@@ -384,10 +384,10 @@ main,
     display: flex;
     flex-direction: column;
     * {
-        flex: 1 1 auto;
+      flex: 1 1 auto;
     }
-    a{
-        text-decoration: none;
+    a {
+      text-decoration: none;
     }
     .appHeader {
       background: $yellowish;
@@ -403,8 +403,8 @@ main,
         font-size: 0.8rem;
       }
       h3 {
-          padding: 0.5rem;
-          flex: 5 1 auto;
+        padding: 0.5rem;
+        flex: 5 1 auto;
       }
     }
     .appContent {
@@ -412,7 +412,17 @@ main,
       //-webkit-overflow-scrolling: touch;
       background: white;
       color: $blackColor;
-      font-size: 1rem;
+      font-size: 0.8rem;
+      text-align: justify;
+      padding: 0.5rem;
+      line-height: 1.4rem;
+
+      img {
+        max-width: 30%;
+        height: auto;
+        float: left;
+        margin-right: 0.5rem;
+      }
     }
     .appFooter {
       background: $yellowish;
@@ -422,8 +432,8 @@ main,
         padding: 0.5rem 0.2rem 1rem 0.2rem;
         flex: 1;
         color: white;
-        font-size: .8rem;
-        
+        font-size: 0.8rem;
+
         i {
           display: block;
           padding: 0.5rem;
