@@ -321,6 +321,58 @@ main figcaption p,
   width: 100%;
 }
 
+#mobileApp h2 {
+  margin-bottom: 45px;
+}
+#mobileApp .contentWrapper {
+  border: 14px solid #0a0a0a;
+  border-radius: 4px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+#mobileApp .contentWrapper * {
+  flex: 1 1 auto;
+}
+#mobileApp .contentWrapper a {
+  text-decoration: none;
+}
+#mobileApp .contentWrapper .appHeader {
+  background: #d98026;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+}
+#mobileApp .contentWrapper .appHeader a {
+  background: lightblue;
+  padding: 0.5rem;
+  color: white;
+  flex: 1 3 auto;
+}
+#mobileApp .contentWrapper .appHeader h3 {
+  padding: 0.5rem;
+  flex: 5 1 auto;
+}
+#mobileApp .contentWrapper .appContent {
+  overflow-y: scroll;
+  background: white;
+  color: #0a0a0a;
+}
+#mobileApp .contentWrapper .appFooter {
+  background: #d98026;
+  display: flex;
+}
+#mobileApp .contentWrapper .appFooter a {
+  border-right: 1px solid grey;
+  padding: 10px 2px;
+  flex: 1;
+  color: white;
+}
+#mobileApp .contentWrapper .appFooter a:last-child {
+  border-right: none;
+}
+
 #signUp input {
   padding: 5px;
   border-radius: 2px;

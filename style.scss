@@ -305,10 +305,10 @@ main,
 }
 
 #airbnbForm {
-    h2 {
-        @extend %h2;
-        margin-bottom: 45px;
-    }
+  h2 {
+    @extend %h2;
+    margin-bottom: 45px;
+  }
   .contentWrapper {
     position: relative;
     overflow: hidden;
@@ -365,6 +365,64 @@ main,
       z-index: -1;
       width: 100%;
       //height: 100%;
+    }
+  }
+}
+
+#mobileApp {
+  $yellowish: hsla(30, 70%, 50%, 1);
+  h2 {
+    @extend h2;
+    margin-bottom: 45px;
+  }
+  .contentWrapper {
+    border: 14px solid $blackColor;
+    border-radius: $largeBdRadius;
+    height: 1000px;
+    //overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    * {
+        flex: 1 1 auto;
+    }
+    a{
+        text-decoration: none;
+    }
+    .appHeader {
+      background: $yellowish;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem;
+      a {
+        background: lightblue;
+        padding: 0.5rem;
+        color: white;
+        flex: 1 3 auto;
+      }
+      h3 {
+          padding: 0.5rem;
+          flex: 5 1 auto;
+      }
+    }
+    .appContent {
+      overflow-y: scroll;
+      //height: 500px;
+      background: white;
+      color: $blackColor;
+    }
+    .appFooter {
+      background: $yellowish;
+      display: flex;
+      a {
+        border-right: 1px solid grey;
+        padding: 10px 2px;
+        flex: 1;
+        color: white;
+      }
+      a:last-child {
+        border-right: none;
+      }
     }
   }
 }
