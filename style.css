@@ -340,14 +340,15 @@ main figcaption p,
   text-decoration: none;
 }
 #mobileApp .contentWrapper .appHeader {
-  background: #d98026;
+  background: #e6801a;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.7rem;
 }
 #mobileApp .contentWrapper .appHeader a {
-  background: lightblue;
+  border: 3px solid white;
+  border-radius: 8px;
   padding: 0.5rem;
   color: white;
   flex: 1 3 auto;
@@ -366,6 +367,10 @@ main figcaption p,
   padding: 0.5rem;
   line-height: 1.4rem;
 }
+#mobileApp .contentWrapper .appContent h3 {
+  font-size: 1.08rem;
+  font-weight: normal;
+}
 #mobileApp .contentWrapper .appContent img {
   max-width: 30%;
   height: auto;
@@ -373,7 +378,7 @@ main figcaption p,
   margin-right: 0.5rem;
 }
 #mobileApp .contentWrapper .appFooter {
-  background: #d98026;
+  background: #e6801a;
   display: flex;
 }
 #mobileApp .contentWrapper .appFooter a {
@@ -535,8 +540,11 @@ footer {
   .container #airbnbForm {
     order: 9;
   }
-  .container footer {
+  .container #mobileApp {
     order: 10;
+  }
+  .container footer {
+    order: 11;
   }
 
   #nav1 li {
