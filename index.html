@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <script src="https://use.fontawesome.com/d7d727877d.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
     <div class="container">
-        
+
         <header>
             <h1><a href="#">What The Flexbox?!</a></h1>
         </header>
@@ -24,17 +26,23 @@
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Education</a></li>
                 <li><a href="#">Ideas</a></li>
-                <li class="social"><a class="aSocial" href="#"><i class="fa fa-instagram" aria-hidden="true" ></i></a></li>
-                <li class="social"><a class="aSocial" href="#"><i class="fa fa-facebook-official" aria-hidden="true" ></a></i></li>
-                <li class="social"><a class="aSocial" href="#"><i class="fa fa-twitter-square" aria-hidden="true" ></i></a></li>
-                <li class="social"><a class="aSocial" href="#"><i class="fa fa-youtube-square" aria-hidden="true" ></i></a></li>
+                <li class="social"><a class="aSocial" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li class="social"><a class="aSocial" href="#"><i class="fa fa-facebook-official"
+                            aria-hidden="true"></a></i></li>
+                <li class="social"><a class="aSocial" href="#"><i class="fa fa-twitter-square"
+                            aria-hidden="true"></i></a></li>
+                <li class="social"><a class="aSocial" href="#"><i class="fa fa-youtube-square"
+                            aria-hidden="true"></i></a></li>
             </ul>
         </nav>
 
         <main>
             <figure>
                 <img src="https://lorempixel.com/1000/600/abstract" alt="#">
-                <figcaption><p>Beautiful abstract image</p></figcaption>
+                <figcaption>
+                    <p>Beautiful abstract image</p>
+                </figcaption>
             </figure>
         </main>
 
@@ -70,7 +78,8 @@
                 </div>
                 <div class="priceTag priceTag2">
                     <h3>Dog</h3>
-                    <p class="catchPhrase">Loving, gentle and caring. Dogs are the best house pet to have and will increase happiness ten fold.</p>
+                    <p class="catchPhrase">Loving, gentle and caring. Dogs are the best house pet to have and will
+                        increase happiness ten fold.</p>
                     <ul class="features">
                         <li>Super Fun</li>
                         <li>Friends love them</li>
@@ -108,7 +117,8 @@
                 </div>
                 <div class="priceTag priceTag2">
                     <h3>Dog</h3>
-                    <p class="catchPhrase">Loving, gentle and caring. Dogs are the best house pet to have and will increase happiness ten fold.</p>
+                    <p class="catchPhrase">Loving, gentle and caring. Dogs are the best house pet to have and will
+                        increase happiness ten fold.</p>
                     <ul class="features">
                         <li>Super Fun</li>
                         <li>Friends love them</li>
@@ -138,7 +148,8 @@
                 <div class="grid-item">Lorem ipsum dolor sit amet, consectetur </div>
                 <div class="grid-item">adipiscing elit, sed do eiusmod tempor </div>
                 <div class="grid-item">incididunt ut</div>
-                <div class="grid-item">labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
+                <div class="grid-item">labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </div>
                 <div class="grid-item">ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
                 <div class="grid-item">Duis aute irure dolor in</div>
                 <div class="grid-item">reprehenderit in voluptate velit esse cillum dolore</div>
@@ -152,23 +163,28 @@
         </section>
 
         <section id="airbnbForm">
-            <form action="#" class="flexForm">
-                <input type="text" name="where" id="where" placeholder="Where do you want to go?">
-                <label for="dateFrom">From</label>
-                <input type="date" name="dateFrom" id="dateFrom">
-                <label for="dateTo">To</label>
-                <input type="date" name="dateTo" id="dateTo">
-                <select name="guests" id="guests">
-                    <option value="1">1 Guest</option>
-                    <option value="2">2 Guests</option>
-                    <option value="3">3 Guests</option>
-                    <option value="4">4 Guests</option>
-                    <option value="5">5 Guests</option>
-                </select>
-                <input type="submit" value="Search">
-            </form>
-            <video src="https://garbaweb.com/archive/coverr--girl-with-dog-near-lake-and-mountains-in-new-zealand-1585909449252.mp4
+            <h2>Single Line Form</h2>
+            <div class="contentWrapper">
+                
+                <form action="#" class="flexForm">
+                    <input type="text" name="where" id="where" placeholder="Where do you want to go?">
+                    <label for="dateFrom">From</label>
+                    <input type="date" name="dateFrom" id="dateFrom">
+                    <label for="dateTo">To</label>
+                    <input type="date" name="dateTo" id="dateTo">
+                    <select name="guests" id="guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                    </select>
+                    <input type="submit" value="Search">
+                </form>
+                <video src="https://garbaweb.com/archive/coverr--girl-with-dog-near-lake-and-mountains-in-new-zealand-1585909449252.mp4
             " class="dog" autoplay loop></video>
+            </div>
+
         </section>
 
         <section id="details">
@@ -178,11 +194,12 @@
 
         <section id="signUp">
             <form action="#">
-                <input type="text" id="name" placeholder="Your Name"><input type="email" name="email" id="email" placeholder="Email Address"><input type="submit" value="Submit">
+                <input type="text" id="name" placeholder="Your Name"><input type="email" name="email" id="email"
+                    placeholder="Email Address"><input type="submit" value="Submit">
             </form>
         </section>
 
-        
+
 
         <footer>
             <p>Copyright ©: me</p>
@@ -191,10 +208,11 @@
 
 
 
-        
+
     </div>
     <!-- #menuButton: jQuery to toggle the "open" class in nav ul -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./script.js"></script>
 </body>
+
 </html>

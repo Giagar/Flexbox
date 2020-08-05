@@ -1,11 +1,11 @@
 :root {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 $sectionBgColor: hsla(200, 80%, 22%, 0.384);
@@ -14,287 +14,301 @@ $largeBdRadius: 4px;
 $smallBdRadius: 2px;
 $btnColor: hsla(54, 100%, 50%, 1);
 
-
 %section {
-    background-color: $sectionBgColor;
-    margin: 40px auto;
-    width: 80%;
-    color: white;
-    text-align: center;
-    padding: 50px 40px;
-    border-radius: 4px;
+  background-color: $sectionBgColor;
+  margin: 40px auto;
+  width: 80%;
+  color: white;
+  text-align: center;
+  padding: 50px 40px;
+  border-radius: 4px;
 }
 
 %h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 %menuLinks {
-    text-decoration: none;
-    padding: 10px;
-    color: white;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
 }
 
 %button {
-    padding: 10px;
-    border-radius: $smallBdRadius;
-    border: none;
-    background: $btnColor;
+  padding: 10px;
+  border-radius: $smallBdRadius;
+  border: none;
+  background: $btnColor;
 }
 
 @mixin scaleUp($scaleValue, $transitionTime) {
-    transform: scale($scaleValue);
-    transition: transform $transitionTime;
+  transform: scale($scaleValue);
+  transition: transform $transitionTime;
 }
 
 .btnActive {
-    //background: hsla(54, 100%, 70%, 1) !important;
-    //background: $btnColor !important;
-    background:hsl(180, 100%, 40%) !important;
-    //transform: scale(1.1);
-    /* box-shadow: 0 0 8px 1px hsla(54, 100%, 90%, 0.8), 0 0 10px 2px hsla(54, 100%, 50%, 0.6), 0 0 14px 2px hsla(54, 100%, 50%, 0.8) inset;
+  //background: hsla(54, 100%, 70%, 1) !important;
+  //background: $btnColor !important;
+  background: hsl(180, 100%, 40%) !important;
+  //transform: scale(1.1);
+  /* box-shadow: 0 0 8px 1px hsla(54, 100%, 90%, 0.8), 0 0 10px 2px hsla(54, 100%, 50%, 0.6), 0 0 14px 2px hsla(54, 100%, 50%, 0.8) inset;
     border: 2px solid hsla(54, 100%, 50%, 0.7) !important; */
-    //border: 6px solid hsl(39, 100%, 40%) !important;
-    //border: 6px solid hsl(180, 100%, 40%) !important;
+  //border: 6px solid hsl(39, 100%, 40%) !important;
+  //border: 6px solid hsl(180, 100%, 40%) !important;
 }
 
 body {
-    background-image: linear-gradient(90deg, rgba(255, 166, 0, 1),hsl(220, 80%, 40%));;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 166, 0, 1),
+    hsl(220, 80%, 40%)
+  );
 }
 
 .container {
-    width: 1700px;
-    margin: 0 auto;
+  width: 1700px;
+  margin: 0 auto;
 }
 
 header {
-    @extend %section;
-    a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.8rem;
-        font-weight: normal;
-        border-style:solid;
-        border-color: white;
-        border-left: 4px;
-        border-right: 4px;
-        padding: 10px;
-        border-radius: 8px;
-    }
+  @extend %section;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: normal;
+    border-style: solid;
+    border-color: white;
+    border-left: 4px;
+    border-right: 4px;
+    padding: 10px;
+    border-radius: 8px;
+  }
 }
 
 //#menuButton: class for opening - closing the menu (controlled in script.js by jquery)
 //I had to set it outside the nav and with !important to make it work
 .open {
-    display: flex !important;
+  display: flex !important;
 }
 
 #nav1 {
-    @extend %section;
-    padding: 0;
-    border: 2px solid white;
+  @extend %section;
+  padding: 0;
+  border: 2px solid white;
 
-    //#menuButton: normally not displayed, a media query changes its display prop
-    .toggleNav {
-        display: none;
+  //#menuButton: normally not displayed, a media query changes its display prop
+  .toggleNav {
+    display: none;
+    @extend %menuLinks;
+  }
+  ul {
+    display: flex;
+    padding: 10px 5px;
+    li {
+      flex: 1 50px;
+      list-style-type: none;
+      text-align: center;
+      padding: 10px 5px;
+      a {
+        display: inline-block;
         @extend %menuLinks;
+      }
     }
-    ul {
-        display: flex;
-        padding: 10px 5px;
-        li {
-            flex: 1 50px;
-            list-style-type: none;
-            text-align: center;
-            padding: 10px 5px;
-            a {
-                display: inline-block;
-                @extend %menuLinks;
-                }        
-            }
-    }
-    
-    a:hover {
-        @include scaleUp(1.5, 0.25s);
-    }
+  }
 
-    .aSocial:hover {
-        @include scaleUp(1.8, 0.25s)
-    }
+  a:hover {
+    @include scaleUp(1.5, 0.25s);
+  }
 
+  .aSocial:hover {
+    @include scaleUp(1.8, 0.25s);
+  }
 }
 
-main, #gallery, #prices, #flexGrid, #airbnbForm, #details, #signUp, footer {
-    @extend %section;
+main,
+#gallery,
+#prices,
+#flexGrid,
+#airbnbForm,
+#details,
+#signUp,
+footer {
+  @extend %section;
+  p {
+    margin: 20px auto;
+  }
+}
+
+main,
+#gallery {
+  img {
+    height: auto;
+    width: 100%;
+  }
+  figcaption {
+    padding-top: 20px;
     p {
-        margin: 20px auto;
+      padding-bottom: 10px;
+      border-bottom: 2px solid white;
+      display: inline-block;
+      width: 250px;
     }
-}
-
-main, #gallery {
-    img {
-        height: auto;
-        width: 100%;
-    }
-    figcaption {
-        padding-top: 20px;
-        p {
-            padding-bottom: 10px;
-            border-bottom: 2px solid white;
-            display: inline-block;
-            width: 250px;
-        }
-    }
+  }
 }
 
 #gallery {
-    img {
-        width: 100%;
-        height: auto;
-    }
+  img {
+    width: 100%;
+    height: auto;
+  }
 
-    //A navbar with the height determined by the <a>, so that the hover effect will spread will fill the entire "button", with the content both horizontally and vertically centered
-    #galleryNavbar {
-        margin-top: 20px;
-    }
+  //A navbar with the height determined by the <a>, so that the hover effect will spread will fill the entire "button", with the content both horizontally and vertically centered
+  #galleryNavbar {
+    margin-top: 20px;
+  }
 
-    #galleryNavbar ul{
-        display: flex;
-        li:first-child, li:last-child {
-            flex: 1; //to give more horizontal room to li with text inside 
-        }
-        li {
-            flex: 3; //to give more horizontal room to li with text inside 
-            list-style-type: none;
-           a {
-               text-decoration: none;
-               color: white;
-               display: flex; //in order to align the text inside
-               flex-basis: 100%; //instead of width: 100%
-               height: 100px;
-               justify-content: center;
-               align-items: center;
-               border-radius: 2px;
-           }
-           a:hover {
-               background: hsla(240, 0%, 26%, 0.8);
-               transition: background 0.2s;
-           } 
-        }
+  #galleryNavbar ul {
+    display: flex;
+    li:first-child,
+    li:last-child {
+      flex: 1; //to give more horizontal room to li with text inside
     }
-
+    li {
+      flex: 3; //to give more horizontal room to li with text inside
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: white;
+        display: flex; //in order to align the text inside
+        flex-basis: 100%; //instead of width: 100%
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+      }
+      a:hover {
+        background: hsla(240, 0%, 26%, 0.8);
+        transition: background 0.2s;
+      }
+    }
+  }
 }
 
 #prices {
-    h2 {
-        @extend %h2;
-    }
-    hr {
-        width: 60%;
-        margin: 18px auto 0 auto;
-    }
-    #prices1, #prices2 {
-        display: flex;
-        .priceTag {
-            flex: 1;
-            font-size: 0.8rem;
-            background: $sectionBgColor;
-            border-radius: 4px;
-            padding: 30px 10px;
-            margin: 15px;
-            color: $blackColor;
+  h2 {
+    @extend %h2;
+  }
+  hr {
+    width: 60%;
+    margin: 18px auto 0 auto;
+  }
+  #prices1,
+  #prices2 {
+    display: flex;
+    .priceTag {
+      flex: 1;
+      font-size: 0.8rem;
+      background: $sectionBgColor;
+      border-radius: 4px;
+      padding: 30px 10px;
+      margin: 15px;
+      color: $blackColor;
 
-            h3 {
-                font-size: 1.3rem;
-                text-transform: uppercase;
-                color: white;
-                margin-bottom: 40px;
-            }
+      h3 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 40px;
+      }
 
-            ul {
-                padding: 10px;
-                li{
-                    list-style-type: none;
-                    border-bottom: 1px solid grey;
-                    padding: 10px 0;
-                }
-                li:last-child {
-                    border-bottom: none !important;
-                }
-            }
-
-            .price {
-                font-size: 1.7rem;
-                margin-bottom: 45px;
-            }
-
-            .cta {
-                @extend %button;
-                text-decoration: none;
-            }
+      ul {
+        padding: 10px;
+        li {
+          list-style-type: none;
+          border-bottom: 1px solid grey;
+          padding: 10px 0;
         }
-    }
-
-    #prices1 {
-        align-items: center;
-    }
-
-    #prices2 {
-        align-items: stretch;
-        .priceTag {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        li:last-child {
+          border-bottom: none !important;
         }
+      }
+
+      .price {
+        font-size: 1.7rem;
+        margin-bottom: 45px;
+      }
+
+      .cta {
+        @extend %button;
+        text-decoration: none;
+      }
     }
-    
+  }
+
+  #prices1 {
+    align-items: center;
+  }
+
+  #prices2 {
+    align-items: stretch;
+    .priceTag {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
 }
 
 #flexGrid {
+  h2 {
+    @extend %h2;
+    margin-bottom: 45px;
+  }
+  .flexGridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 350px;
+    .grid-item {
+      //border: 1px solid grey;
+      padding: 10px 5px;
+      margin: 4px;
+      background: $sectionBgColor;
+      flex: 0 1 calc(33.33% - 8px);
+      border-radius: $smallBdRadius;
+      font-size: 1rem;
+      color: $blackColor;
+    }
+  }
+
+  .buttonsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    background: $sectionBgColor;
+    margin: 45px 35px;
+    padding: 20px;
+    border-radius: $smallBdRadius;
+    .btn {
+      @extend %button;
+      margin: 0 10px;
+      font-size: 0.8rem;
+    }
+    .btn:hover {
+      transform: scale(1.2);
+      transition: transform 0.25s;
+    }
+  }
+}
+
+#airbnbForm {
     h2 {
         @extend %h2;
         margin-bottom: 45px;
     }
-    .flexGridContainer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        height: 350px;
-        .grid-item {
-            //border: 1px solid grey;
-            padding: 10px 5px;
-            margin: 4px;
-            background: $sectionBgColor;
-            flex: 0 1 calc(33.33% - 8px);
-            border-radius: $smallBdRadius;
-            font-size: 1rem;
-            color: $blackColor;
-        }
-    }
-    
-    .buttonsContainer {
-        display: flex;
-        justify-content: space-evenly;
-        background: $sectionBgColor;
-        margin: 45px 35px;
-        padding: 20px;
-        border-radius: $smallBdRadius;
-        .btn {
-            @extend %button;
-            margin: 0 10px;
-            font-size: 0.8rem;
-        }
-        .btn:hover {
-            transform: scale(1.2);
-            transition: transform .25s;
-        }
-    }
-    
-}
-
-#airbnbForm {
+  .contentWrapper {
     position: relative;
     overflow: hidden;
     height: 500px;
@@ -302,226 +316,222 @@ main, #gallery {
     justify-content: center;
     align-items: center;
     .flexForm {
-        flex: 1;
-        max-width: 1000px;
+      flex: 1;
+      max-width: 1000px;
+      display: flex;
+      justify-content: center;
+      border: 15px solid hsla(0, 0, 10%, 0.3);
+      border-radius: $largeBdRadius;
+      input,
+      label,
+      select {
         display: flex;
+        flex: 2 3 300px;
+        padding: 8px !important;
+        font-size: 0.8rem;
+        align-items: center;
+        border: none;
+        border-right: 1px solid lightgrey;
+        background: white;
+        color: $blackColor;
+      }
+
+      label,
+      select {
+        flex: 1 6 100px;
+      }
+
+      input:first-child {
+        flex: 1 1 300px;
+      }
+
+      input[value="Search"] {
+        background: hsl(0, 80%, 50%);
+        border-right: none;
+        color: white;
         justify-content: center;
-        border: 15px solid hsla(0, 0, 10%, 0.3);
-        border-radius: $largeBdRadius;
-        input, label, select {
-            display: flex;
-            flex: 2 3 300px;
-            padding: 8px !important;
-            font-size: 0.8rem;
-            align-items: center;
-            border: none;
-            border-right: 1px solid lightgrey;
-            background: white;
-            color: $blackColor;
-        }
+      }
 
-        label, select {
-            flex: 1 6 100px;
-        }
-        
-        input:first-child {
-            flex: 1 1 300px;
-        }
-
-        input[value = Search] {
-            background: hsl(0, 80%, 50%);
-            border-right: none;
-            color: white;
-            justify-content: center;
-        }
-
-        input[type = date] {
-            font-family: Arial, Helvetica, sans-serif;
-            color: hsla(0, 0, 50%, 1);
-        }
-
+      input[type="date"] {
+        font-family: Arial, Helvetica, sans-serif;
+        color: hsla(0, 0, 50%, 1);
+      }
     }
     video {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        //height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      //height: 100%;
     }
-
+  }
 }
-
 
 #signUp {
-    input {
-        padding: 5px;
-        border-radius: 2px;
-        border: none;
-        margin: 5px 10px;
-    }
+  input {
+    padding: 5px;
+    border-radius: 2px;
+    border: none;
+    margin: 5px 10px;
+  }
 }
 
-
-
-
-
 @media all and (max-width: 1700px) {
-    .container {
-        width: 100%;
-    }
+  .container {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 1200px) {
-    #airbnbForm {
-        .flexForm {
-            flex: 0 1 250px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: stretch;
-            input, label, select {
-                flex: 1;
-                border-right: none;
-                border-bottom: 1px solid lightgrey;
-            }
-            input:first-child {
-                flex-basis: 36px;
-            }
+  #airbnbForm {
+    .contentWrapper {
+      .flexForm {
+        flex: 0 1 250px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        input,
+        label,
+        select {
+          flex: 1;
+          border-right: none;
+          border-bottom: 1px solid lightgrey;
+        }
+        input:first-child {
+          flex-basis: 36px;
+        }
 
-            input:last-child {
-                border-bottom: none;
-            }
+        input:last-child {
+          border-bottom: none;
         }
-        video {
-            width: auto;
-            height: 100%;
-        }
+      }
+      video {
+        width: auto;
+        height: 100%;
+      }
     }
+  }
 }
 
 @media all and (max-width: 1100px) {
-    #nav1 ul {
-        flex-wrap: wrap;
-    }
+  #nav1 ul {
+    flex-wrap: wrap;
+  }
 
-    #nav1 li {
-        flex: 1 1 50% !important;
-    }
+  #nav1 li {
+    flex: 1 1 50% !important;
+  }
 
-    #nav1 .social {
-        flex: 1 1 25% !important;
-    }
+  #nav1 .social {
+    flex: 1 1 25% !important;
+  }
 }
 
 @media all and (max-width: 800px) {
+  #prices1,
+  #prices2 {
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    justify-content: center;
+  }
+  .priceTag {
+    flex: 0 1 calc(50% - 30px) !important;
+  }
 
-    #prices1, #prices2 {
-        flex-wrap: wrap !important;
-        align-items: stretch !important;
-        justify-content: center;
-    }
-    .priceTag {
-        flex: 0 1 calc(50% - 30px) !important;                    
-    }
-
-    .flexGridContainer {
-        height: auto !important;
-    }
-    
+  .flexGridContainer {
+    height: auto !important;
+  }
 }
 
 @media all and (max-width: 600px) {
-    %section {
-        margin: 20px auto;
+  %section {
+    margin: 20px auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    #nav1 {
+      order: 1;
+
+      //#menuButton: to make it visible with screen < 600px wide
+      .toggleNav {
+        display: block;
+      }
+
+      //#menuButton: to make it not visible with screen < 600px wide; the class "open" will change this when the menu button is clicked
+      ul {
+        display: none;
+      }
     }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        #nav1 {
-            order: 1;
-
-            //#menuButton: to make it visible with screen < 600px wide
-            .toggleNav {
-                display: block;
-            }
-
-            //#menuButton: to make it not visible with screen < 600px wide; the class "open" will change this when the menu button is clicked
-            ul {
-                display: none;
-            }
-
-        }
-
-        header {
-            order: 2;
-            a {
-                border: none;
-            }
-            
-        }
-
-        #details {
-            order: 3;
-        }
-
-        #signUp {
-            order: 4;
-            input {
-                display: block;
-                width: 100%;
-                margin: 10px auto;
-            }
-            input[type="submit"] {
-                width: 40%;
-            }
-        }
-
-        main {
-            order: 5;
-        }
-
-        //made all the navbars not visible but the arrows, made the menu items smaller
-        #gallery {
-            order: 6;
-            a {
-                height: 60px !important; //if not important, does not work
-            }
-            li:not(.arrow) {
-                display: none;
-            }
-        }
-
-        #prices {
-            order: 7;
-            .priceTag {
-                flex: 1 1 100% !important;
-            }
-        }
-
-        #flexGrid {
-            order: 8;
-            .grid-item {
-                flex: 1 1 100%;
-            }
-            .buttonsContainer {
-                display: none;
-            }
-        }
-
-        #airbnbForm {
-            order: 9;
-        }
-
-        footer {
-            order: 10;
-        }
-
+    header {
+      order: 2;
+      a {
+        border: none;
+      }
     }
 
-    #nav1 li {
-        flex-basis: 100% !important;
+    #details {
+      order: 3;
     }
+
+    #signUp {
+      order: 4;
+      input {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+      }
+      input[type="submit"] {
+        width: 40%;
+      }
+    }
+
+    main {
+      order: 5;
+    }
+
+    //made all the navbars not visible but the arrows, made the menu items smaller
+    #gallery {
+      order: 6;
+      a {
+        height: 60px !important; //if not important, does not work
+      }
+      li:not(.arrow) {
+        display: none;
+      }
+    }
+
+    #prices {
+      order: 7;
+      .priceTag {
+        flex: 1 1 100% !important;
+      }
+    }
+
+    #flexGrid {
+      order: 8;
+      .grid-item {
+        flex: 1 1 100%;
+      }
+      .buttonsContainer {
+        display: none;
+      }
+    }
+
+    #airbnbForm {
+      order: 9;
+    }
+
+    footer {
+      order: 10;
+    }
+  }
+
+  #nav1 li {
+    flex-basis: 100% !important;
+  }
 }
- 
